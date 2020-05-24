@@ -6,12 +6,67 @@
     <title>Aung Kyaw Hein</title>
     <meta name="description" content="Aung Kyaw Hein Github Page.">
     <meta name="theme-color" content="#6ca5ab">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" type="image/png" href="images/logo-180.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inconsolata', monospace;
+        font-size: 16px;
+        color: #585f6d;
+      }
+      h1 {
+        font-family: 'Pacifico', cursive;
+        font-size: 12vw;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #6ca5ab;
+      }
+      main {
+        width: 100vw;
+        height: 100vh;
+      }
+      .flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .banner {
+        width: 100%;
+        height: auto;
+      }
+      footer {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background-color: #f0f0f0;
+        box-sizing: border-box;
+      }
+      footer p {
+        margin: 0;
+        font-size: .75rem;
+        text-align: right;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hello Friends!</h1>
+    <main class="flex">
+      <img class="banner" src="images/banner.png" width="1500" height="500" alt="Banner image">
+      <h1>Hello Friends!</h1>
+      <footer>
+        <p>Logo images are generated with <a href="https://hatchful.shopify.com/">hatchful.shopify.com</a>.</p>
+      </footer>
+    </main>
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js');
