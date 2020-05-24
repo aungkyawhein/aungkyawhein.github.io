@@ -1,0 +1,18 @@
+{
+  "short_name": "Aung",
+  "name": "Aung Kyaw Hein",
+  "description": "Aung Kyaw Hein's Github page.",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "type": "image/png",
+      "sizes": "800x800"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#585f6d",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#6ca5ab",
+  "orientation": "portrait"
+}
