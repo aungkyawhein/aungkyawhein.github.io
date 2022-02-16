@@ -65,6 +65,14 @@
       .banner {
         width: 100%;
         height: auto;
+        background-color: #58606d;
+      }
+      .banner img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 1640px;
+        margin: 0 auto;
       }
       footer {
         display: block;
@@ -82,7 +90,13 @@
   </head>
   <body>
     <main class="flex">
-      <img class="banner" src="images/banner.png" width="1500" height="500" alt="Banner image">
+      <div class="banner">
+        <picture>
+          <source media="(max-width: 800px)" srcset="images/logo-transparent.png" width="800" height="800">
+          <source media="(min-width: 801px)" srcset="images/banner.png" width="1640" height="624">
+          <img src="images/banner.png" alt="Banner image" width="1640" height="624">
+        </picture>
+      </div>
       <h1>Hello Friends!</h1>
       <footer>
         <p>Logo images are generated with
