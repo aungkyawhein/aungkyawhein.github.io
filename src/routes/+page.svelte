@@ -1,5 +1,5 @@
 <script>
-  import Bio from "$lib/Bio.svelte";
+  import Bio from "$lib/components/Bio.svelte";
 </script>
 
 <Bio />
