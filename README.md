@@ -2,6 +2,10 @@
 
 New version of [aungkyawhein.com](https://aungkyawhein.com) targets a 100% Lighthouse score for the best performance benchmark.
 
+## Ingredients
+* [Sveltekit](https://kit.svelte.dev/docs/introduction)
+* [Tailwindcss](https://tailwindcss.com/docs/installation)
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
