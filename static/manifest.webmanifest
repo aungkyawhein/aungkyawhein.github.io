@@ -10,9 +10,9 @@
     }
   ],
   "start_url": "/",
-  "background_color": "#585f6d",
+  "background_color": "#0065A3",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#6ca5ab",
+  "theme_color": "#0065A3",
   "orientation": "portrait"
 }
