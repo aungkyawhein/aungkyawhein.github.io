@@ -2,6 +2,9 @@
 
 New version of [aungkyawhein.com](https://aungkyawhein.com) targets a 100% Lighthouse score for the best performance benchmark.
 
+## References
+* (Sveltekit)[https://kit.svelte.dev/docs/introduction]
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
