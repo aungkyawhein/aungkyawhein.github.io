@@ -1,4 +1,8 @@
 <script>
+  import { spin, typewriter } from "$lib/animations";
+  import { animated } from "$lib/stores";
+  import { onMount } from "svelte";
+  import { fade, fly } from "svelte/transition";
   import Container from "./Container.svelte";
 
   // Data
@@ -25,16 +29,76 @@
     "shadow-[5px_5px_15px_-5px_rgba(255,255,255,0.3)]",
     "-rotate-3",
   ].join(" ");
+
+  // animation array
+  let animate = Array.of(false, false, false, false, false);
+  let i = 0;
+
+  const animateNext = () => {
+    ++i;
+    animate[i] = true;
+  };
+
+  const animateEnd = () => {
+    animated.update((state) => (state = true));
+  };
+
+  // start first animation on load
+  onMount(() => {
+    animate[i] = true;
+  });
 </script>
 
 <section class="py-4 text-light">
   <Container>
-    <h1 class="text-5xl md:text-6xl mb-2">{name}</h1>
-    <p class="text-2xl mb-8">{title}</p>
-    <p class="max-w-xl">{description}</p>
-    <div class={quoteClass}>
-      <p class="">{quote}</p>
-    </div>
-    <p class="max-w-xl">{message}</p>
+    {#if animate[0]}
+      <h1
+        class="text-5xl md:text-6xl mb-2"
+        in:fade={{ duration: 1000 }}
+        on:introend={animateNext}
+      >
+        {name}
+      </h1>
+    {/if}
+
+    {#if animate[1]}
+      <p
+        class="text-2xl mb-8"
+        in:fly={{ y: 20, duration: 1000 }}
+        on:introend={animateNext}
+      >
+        {title}
+      </p>
+    {/if}
+
+    {#if animate[2]}
+      <p
+        class="max-w-xl"
+        transition:typewriter={{ speed: 2 }}
+        on:introend={animateNext}
+      >
+        {description}
+      </p>
+    {/if}
+
+    {#if animate[3]}
+      <div
+        class={quoteClass}
+        in:spin={{ duration: 1000 }}
+        on:introend={animateNext}
+      >
+        <p class="">{quote}</p>
+      </div>
+    {/if}
+
+    {#if animate[4]}
+      <p
+        class="max-w-xl"
+        transition:typewriter={{ speed: 2 }}
+        on:introend={animateEnd}
+      >
+        {message}
+      </p>
+    {/if}
   </Container>
 </section>
