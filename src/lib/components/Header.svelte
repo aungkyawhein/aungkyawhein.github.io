@@ -44,6 +44,7 @@
               href={navLink.url}
               class="hover:opacity-75 transition-opacity"
               target="_blank"
+              aria-label={navLink.name}
             >
               {#if animate[index]}
                 <img
