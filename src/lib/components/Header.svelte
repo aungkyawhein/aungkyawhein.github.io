@@ -6,6 +6,7 @@
   import githubIcon from "$lib/assets/github-mark-white.png";
   import logo from "$lib/assets/logo-transparent.png";
   import { animated } from "$lib/stores";
+  import { duration } from "$lib/variables";
 
   const navLinks = [
     {
@@ -52,7 +53,7 @@
                   alt={navLink.name}
                   width="24"
                   height="24"
-                  in:zoom={{ duration: 1000 }}
+                  in:zoom={{ duration: duration }}
                   on:introend={animateNext}
                 />
               {/if}

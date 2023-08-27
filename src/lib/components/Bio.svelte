@@ -1,6 +1,7 @@
 <script>
   import { spin, typewriter } from "$lib/animations";
   import { animated } from "$lib/stores";
+  import { duration, speed } from "$lib/variables";
   import { onMount } from "svelte";
   import { fade, fly } from "svelte/transition";
   import Container from "./Container.svelte";
@@ -54,7 +55,7 @@
     {#if animate[0]}
       <h1
         class="text-5xl md:text-6xl mb-2"
-        in:fade={{ duration: 1000 }}
+        in:fade={{ duration: duration / 2 }}
         on:introend={animateNext}
       >
         {name}
@@ -64,7 +65,7 @@
     {#if animate[1]}
       <p
         class="text-2xl mb-8"
-        in:fly={{ y: 20, duration: 1000 }}
+        in:fly={{ y: 20, duration: duration }}
         on:introend={animateNext}
       >
         {title}
@@ -74,7 +75,7 @@
     {#if animate[2]}
       <p
         class="max-w-xl"
-        transition:typewriter={{ speed: 2 }}
+        transition:typewriter={{ speed: speed }}
         on:introend={animateNext}
       >
         {description}
@@ -84,7 +85,7 @@
     {#if animate[3]}
       <div
         class={quoteClass}
-        in:spin={{ duration: 1000 }}
+        in:spin={{ duration: duration / 2 }}
         on:introend={animateNext}
       >
         <p class="">{quote}</p>
@@ -94,7 +95,7 @@
     {#if animate[4]}
       <p
         class="max-w-xl"
-        transition:typewriter={{ speed: 2 }}
+        transition:typewriter={{ speed: speed }}
         on:introend={animateEnd}
       >
         {message}
